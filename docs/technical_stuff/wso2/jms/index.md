@@ -6,7 +6,7 @@ I was struggling for few days to get JMS queue up-and-running in `WSO2 IoT Serve
 
 The WSO2 IoT server consists of 3 tiers: `Broker`, `Core` and `Analytics` as shown below
 
-<center><img src="images/1.png" width="70%"></center>
+<center><img src="../images/1.png" width="70%"></center>
 
 Now, for using the JMS there are 3 options in WSO2 IoT server, which are
 
@@ -14,10 +14,10 @@ Now, for using the JMS there are 3 options in WSO2 IoT server, which are
 1. Using Apache Qpid
 1. Using WSO2 Message Broker (MB)
 
-Out of these, the first option worked for me. The important thing to understand is that, we need to enable the ActiveMQ configurations for all three tiers i.e. Broker, Core and Analytics. The most confusing part is the file structure for configurations, as WSO2 has so many products that even most of paths mentioned in documentation got me confused. So, I would advice you to write the paths down or mark the folders using color coding. Path for IoT Core is shown below <center>![](images/2.png)</center>
+Out of these, the first option worked for me. The important thing to understand is that, we need to enable the ActiveMQ configurations for all three tiers i.e. Broker, Core and Analytics. The most confusing part is the file structure for configurations, as WSO2 has so many products that even most of paths mentioned in documentation got me confused. So, I would advice you to write the paths down or mark the folders using color coding. Path for IoT Core is shown below <center>![](../images/2.png)</center>
 
 
-Mark both `.xml` files which are selected in fugure. Next, the path for IoT Analytics as shown below <center>![](images/3.png)</center>
+Mark both `.xml` files which are selected in fugure. Next, the path for IoT Analytics as shown below <center>![](../images/3.png)</center>
 
 
 The path of `IoT broker` is in `wso2/broker/conf/axis2` similar to IoT analytics.
@@ -81,14 +81,14 @@ Yes, you have to enable aforementioned settings for both `axis2.xml` and `axis2_
 
 !!! Error "Exception" 
     Please dot not enable Transport Sender in IoT_HOME/conf/axis2.xml and IoT_HOME/conf/axis2_client.xml. However, enable Transport sender for all the tiers. A summarized view is given in below table.
-    <center>![](images/4.png)</center>
+    <center>![](../images/4.png)</center>
 
 
 ## Download the required dependencies.
 
 !!! warning "Caveat"
     The ActiveMQ libraries need to be available in various classpath folder of IoT server. You need to copy the jars from the lib folder of the ActiveMQ as shown below.
-    <center>![](images/5.png)</center>
+    <center>![](../images/5.png)</center>
 
 In case you use the dependency manager such as brew or apt-get to install ActiveMQ, then please find the right version of the ActiveMQ and download the binary version to get jars or go to installation folder. As I used ActiveMQ version 5.5.1 , thus these are the required jars.
 
@@ -116,7 +116,7 @@ If you are mac user, then type `brew install activemq` to download ActiveMQ. Fur
 
 ## Start the IoT Server i.e. broker, core and analytics.
 
-While the products are starting, run a find search in terminal for jms keyword. This way you will know if there is some issue related to JMS. Message broker should say that jms sender started as shown below <center>![](images/6.png)</center>
+While the products are starting, run a find search in terminal for jms keyword. This way you will know if there is some issue related to JMS. Message broker should say that jms sender started as shown below <center>![](../images/6.png)</center>
 
 
 
@@ -124,7 +124,7 @@ While the products are starting, run a find search in terminal for jms keyword. 
 
 First make the basic pipeline so that you have the streaming data arriving at IoT server to a particular stream say `stream A`. Now we will add the `stream A` to JMS queue publisher. Then we need the JMS receiver to get the data from JMS publisher and further sends it to a logger. Lets understand it by below figure.
 
-<center><img src="images/7.png" width="90%"></center>
+<center><img src="../images/7.png" width="90%"></center>
 
 
 As shows in the above figure the JMS publisher receives the `stream A` and en-queues the tuples/events in `queue1`. Further the JMS Subscriber subscribes to queue1 and send it to `Stream C` . Further `Stream C` is published to Logger publisher which shows the logs in Analytics terminal console .

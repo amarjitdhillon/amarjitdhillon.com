@@ -1,3 +1,7 @@
+---
+icon: material/image-size-select-small
+---
+
 # Combination Sum
 
 <figure markdown>

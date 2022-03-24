@@ -87,7 +87,7 @@ nav:
   - Home: 
     - 'Home' : 'index.md'        
   - Data Structures and Algorithms: 
-    - 'Combination sum': cp/combination-sum.md
+    - 'Combination sum '  : cp/combination-sum.md
   - System design:
     - 'Design Parking Lot': sys_design/designParkingLot.md
   - Azure:
@@ -95,7 +95,9 @@ nav:
   - AWS:
     - 'ADF 101': 'azure/adf101.md'
   - Technical Stuff:
-    - 'Tech post': 'technical_stuff/tech1.md'
+    - 'Private Git repo & Cpanel': 'technical_stuff/blogs/cpanel/gitAndCpanel.md'
+    - 'H2 Database for WSO2 Products' : 'technical_stuff/wso2/h2/wso2.md'
+    - 'Setting up JMS Queue in WSO2 IoT Server' : 'technical_stuff/wso2/jms/index.md'
   - AI/ML:
     - 'basics': 'AI/ai101.md'
   - Recipes:

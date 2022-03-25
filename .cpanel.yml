@@ -3,4 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/amartymq/public_html/
     - /bin/cp -R site/* $DEPLOYPATH
-    # this is a comment
+    # this is a new comment

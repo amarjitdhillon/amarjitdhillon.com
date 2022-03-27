@@ -1,10 +1,10 @@
 site_name: Amar Dhillon's blog
-site_description: A personal blog by Amarjit Singh Dhillonn
+site_description: A personal blog by Amarjit Singh Dhillon
 
 ## Configuration
 theme:
   name: material
-  custom_dir: docs/overrides/
+  custom_dir: !ENV [THEME_DIR, "material"]
   palette: 
   - scheme: default
     toggle:
@@ -29,7 +29,6 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
-
 
 repo_url: https://github.com/amarjitdhillon/CP_2021
 repo_name: My Github Repo
@@ -79,13 +78,11 @@ extra:
 
 plugins:
     - search
-    
     - macros
 
 ## Page tree
 nav:
-  - Home: 
-    - 'Home' : 'index.md'        
+  - 'Home' : 'index.md'        
   - Data Structures and Algorithms: 
     - 'Combination sum '  : cp/combination-sum.md
   - System design:

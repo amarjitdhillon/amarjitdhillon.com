@@ -1,7 +1,4 @@
 ---
-template: home.html
-title: Home
+template: overrides/home.html
+title: Material for MkDocs
 ---
-
-
-      

@@ -2,7 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/amartymq/public_html/
-    - /bin/rm -rf $DEPLOYPATH/*
-    - /bin/mkdir $DEPLOYPATH/
     - /bin/cp -R site/* $DEPLOYPATH
     # this is a new comment
